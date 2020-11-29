@@ -2,13 +2,40 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.navlink {
+  font-size: 1.5vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+  color: white;
+  transition: all 1s ease-in-out;
+}
+
+.navlink:hover {
+  color: turquoise;
+  transition: all 1s ease-in-out;
+}
+
+.navouter {
+  background-color: lightslategray;
+  height: 10vh;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  z-index: 1000;
 }
 
 * {

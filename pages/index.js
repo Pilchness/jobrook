@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { NavBar } from './components/navbar';
+import Navigation from './components/navigation';
 
 export default function Home() {
   return (
@@ -10,8 +10,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <NavBar />
+      <main className={styles.mainContainer}>
+        <Navigation />
+        <div className={styles.main}>
+          <img className={styles.image} src="/images/mainimage.jpeg" width="100%" height="auto" />
+        </div>
+        <div
+          style={{
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            marginTop: '10vh',
+            marginLeft: '45vw'
+          }}
+        >
+          <h1 className={styles.title}>Jo Brookbank</h1>
+        </div>
       </main>
 
       <footer className={styles.footer}></footer>
