@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap');
-
 .container {
   display: flex;
   position: absolute;
@@ -21,11 +19,47 @@
   opacity: 0.5;
 }
 
-.title {
+.mainheading {
   font-family: 'Lovers Quarrel', cursive;
   font-size: 12vw;
-  margin: 0;
+  text-align: right;
+  margin-right: 8vw;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
   color: darkslategray;
   text-shadow: rgba(0, 0, 0, 0.5) -1px 0, rgba(0, 0, 0, 0.3) 0 -1px, rgba(255, 255, 255, 0.5) 0 1px,
     rgba(0, 0, 0, 0.3) -1px -2px;
+}
+
+.subheading {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.5vw;
+  position: relative;
+  top: -6.5vw;
+  margin-right: 8vw;
+  margin-bottom: 0;
+  text-align: right;
+  color: darkgreen;
+  text-shadow: rgba(0, 0, 0, 0.5) -1px 0, rgba(0, 0, 0, 0.3) 0 -1px, rgba(255, 255, 255, 0.5) 0 1px,
+    rgba(0, 0, 0, 0.3) -1px -2px;
+}
+
+.openingpara {
+  font-size: 1.6vw;
+  text-align: right;
+  margin-right: 8vw;
+  top: -6.5vw;
+  position: relative;
+}
+
+.buttoncontainer {
+  text-align: right;
+  margin-right: 8vw;
+}
+
+.ctabutton {
+  font-size: 1.5vw;
+  top: -6.6vw;
+  position: relative;
 }
