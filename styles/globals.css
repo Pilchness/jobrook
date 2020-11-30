@@ -16,13 +16,13 @@ section {
 }
 
 p {
-  font-size: 1.3em;
+  font-size: 1.3vw;
   font-family: Nunito, 'Lucida Sans', 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
   text-align: justify;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3vw;
   font-weight: 700;
   font-family: 'Mate SC', serif, Verdana, sans-serif;
 }
