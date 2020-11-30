@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { useEffect } from 'react';
 import styles from '../styles/Home.module.css';
-import Navigation from './components/navigation';
-import Footer from './components/footer';
+import Navigation from '../components/navigation';
+import Footer from '../components/footer';
 
 export default function Home() {
   function changeTitleOpacity() {

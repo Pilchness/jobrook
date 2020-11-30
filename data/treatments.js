@@ -1,4 +1,4 @@
-const treatments = [
+export const treatments = [
   { treatment: 'none' },
   {
     name: 'Full Consultation',
@@ -39,5 +39,3 @@ const treatments = [
     price: 0
   }
 ];
-
-export default treatments;

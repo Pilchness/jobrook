@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Navigation from './components/navigation';
-import Footer from './components/footer';
+import Navigation from '../components/navigation';
+import Footer from '../components/footer';
 
 export default function About() {
   return (
