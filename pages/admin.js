@@ -2,12 +2,6 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { connectToDatabase } from '../util/mongodb';
 
-import dynamic from 'next/dynamic';
-
-const StarRatings = dynamic(() => import('react-star-ratings'), {
-  ssr: false
-});
-
 export default function Admin(props) {
   return (
     <div className={styles.container}>
