@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 import Navigation from '../components/navigation';
 import Footer from '../components/footer';
 
@@ -13,9 +14,7 @@ export default function Booking(props) {
     databaseAppointments[props.appointments[i].date] = props.appointments[i].appointments;
   }
   const [appointments, updateAppointments] = useState(databaseAppointments);
-  //const appointments = databaseAppointments;
   const dateKeys = Object.keys(appointments);
-  console.log(appointments);
 
   return (
     <div className={'container'}>
@@ -34,11 +33,9 @@ export default function Booking(props) {
             </header>
 
             <p>Booking info here</p>
-            <div>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 20 }}>
               <OnlineBooking appointments={appointments} dateKeys={dateKeys} />
             </div>
-            <p>Booking info, terms and conditions etc.</p>
-            {/* <AppointmentPost /> */}
           </section>
         </div>
       </main>
@@ -50,7 +47,7 @@ export default function Booking(props) {
 
 export async function getServerSideProps() {
   const { db } = await connectToDatabase();
-  const appointments = await db.collection('bookingdata').find({}).limit(100).toArray();
+  const appointments = await db.collection('bookingdata').find({}).limit(10).toArray();
   return {
     props: {
       appointments: JSON.parse(JSON.stringify(appointments))
