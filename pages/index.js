@@ -2,15 +2,21 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import styles from '../styles/Home.module.css';
 import Navigation from './components/navigation';
+import Footer from './components/footer';
 
 export default function Home() {
   function changeTitleOpacity() {
-    var maintext = document.getElementById('sitename');
-    this.scrollY > 20 ? (maintext.style.opacity = 0.2) : (maintext.style.opacity = 1);
+    let maintext = document.getElementById('sitename');
+    if (maintext) {
+      this.scrollY > 20 ? (maintext.style.opacity = 0.2) : (maintext.style.opacity = 1);
+    }
   }
 
   useEffect(() => {
     window.addEventListener('scroll', changeTitleOpacity, false);
+    return () => {
+      window.removeEventListener('scroll', changeTitleOpacity, false);
+    };
   }, []);
 
   return (
@@ -63,16 +69,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer>
-        <div className={'footercontainer'}>
-          <h3 style={{ textAlign: 'right', fontFamily: 'Nunito', fontWeight: '300', color: 'white', marginBottom: 5 }}>
-            Jo Brookbank, Family Homeopath: 12 Three Road, Sevenoaks - Tel: 01234 567890
-          </h3>
-          <h6 style={{ textAlign: 'right', fontFamily: 'Nunito', fontWeight: '300', color: 'white', marginTop: 5 }}>
-            Website Design ©Richard Barnes 2020
-          </h6>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

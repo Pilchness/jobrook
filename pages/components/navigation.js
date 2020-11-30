@@ -15,8 +15,8 @@ const Navigation = () => {
       <Link href={'/booking'}>
         <a className={'navlink'}>Booking</a>
       </Link>
-      <Link href={'/blog'}>
-        <a className={'navlink'}>Blog</a>
+      <Link href={'/testimonials'}>
+        <a className={'navlink'}>Testimonials</a>
       </Link>
       <Link href={'/contact'}>
         <a className={'navlink'}>Contact</a>

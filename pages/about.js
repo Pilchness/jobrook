@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Navigation from './components/navigation';
+import Footer from './components/footer';
 
 export default function About() {
   return (
@@ -9,15 +10,16 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={'pagesmain'}>
+      <main className={'pagehead'}>
         <Navigation />
-        <header className={'pagehead'}>
-          <h1>About</h1>
-        </header>
+
         <div>
           <section>
+            <header>
+              <h1>About Me</h1>
+            </header>
             <img
-              src="/images/mainimage.jpeg"
+              src="/images/homeopath.png"
               height="40%"
               width="40%"
               alt="Image"
@@ -32,22 +34,19 @@ export default function About() {
               laborum dolor in ea. Est aliquip ea magna et proident anim officia nisi. Sunt sint deserunt minim amet
               nisi. Aute do elit ipsum velit anim fugiat labore aute in culpa ad pariatur non sit.
             </p>
-
-            <div></div>
+            <p>
+              About...Dolore velit exercitation commodo excepteur enim laboris consectetur irure id mollit sint magna.
+              Velit consequat velit non officia eiusmod sunt consequat sint sit sit excepteur irure ea nulla. Cupidatat
+              commodo velit culpa adipisicing irure anim eu. Adipisicing in et labore reprehenderit cupidatat nostrud
+              minim ipsum et duis sint dolor aliquip. Dolor aliquip enim ullamco enim minim consequat deserunt ipsum
+              laborum dolor in ea. Est aliquip ea magna et proident anim officia nisi. Sunt sint deserunt minim amet
+              nisi. Aute do elit ipsum velit anim fugiat labore aute in culpa ad pariatur non sit.
+            </p>
           </section>
         </div>
       </main>
 
-      <footer>
-        <div className={'footercontainer'}>
-          <h3 style={{ textAlign: 'right', fontFamily: 'Nunito', fontWeight: '300', color: 'white', marginBottom: 5 }}>
-            Jo Brookbank, Family Homeopath: 12 Three Road, Sevenoaks - Tel: 01234 567890
-          </h3>
-          <h6 style={{ textAlign: 'right', fontFamily: 'Nunito', fontWeight: '300', color: 'white', marginTop: 5 }}>
-            Website Design ©Richard Barnes 2020
-          </h6>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
