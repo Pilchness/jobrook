@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Navigation from '../components/navigation';
 import Footer from '../components/footer';
 
-export default function Booking() {
+export default function Testimonials() {
   return (
     <div className={'container'}>
       <Head>
