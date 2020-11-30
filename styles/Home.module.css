@@ -1,11 +1,7 @@
-.container {
-  display: flex;
-  position: absolute;
-  background-color: aliceblue;
-}
-
-.mainContainer {
-  align-items: center;
+.image {
+  opacity: 0.4;
+  position: fixed;
+  top: 0;
 }
 
 .main {
@@ -15,14 +11,12 @@
   position: 'relative';
 }
 
-.image {
-  opacity: 0.5;
-}
-
 .mainheading {
   font-family: 'Lovers Quarrel', cursive;
   font-size: 12vw;
   text-align: right;
+  position: sticky;
+  top: 5vw;
   margin-right: 8vw;
   margin-top: 0;
   margin-bottom: 0;
@@ -46,7 +40,8 @@
 }
 
 .openingpara {
-  font-size: 1.6vw;
+  font-size: 3rem;
+  font-size: clamp(1.6vw, 1.8vw, 2vw + 1rem);
   text-align: right;
   margin-right: 8vw;
   top: -6.5vw;
@@ -63,3 +58,13 @@
   top: -6.6vw;
   position: relative;
 }
+
+/* .footercontainer {
+  margin-right: 8vw;
+}
+
+.footer {
+  background-color: black;
+  opacity: 0.5;
+  text-align: right;
+} */

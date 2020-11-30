@@ -1,31 +1,53 @@
 import Head from 'next/head';
+import { useEffect } from 'react';
 import styles from '../styles/Home.module.css';
 import Navigation from './components/navigation';
 
 export default function Home() {
+  function changeTitleOpacity() {
+    var maintext = document.getElementById('sitename');
+    this.scrollY > 20 ? (maintext.style.opacity = 0.2) : (maintext.style.opacity = 1);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeTitleOpacity, false);
+  }, []);
+
   return (
-    <div className={styles.container}>
+    <div className={'container'}>
       <Head>
         <title>Jo Brookbank</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.mainContainer}>
+      <main className={'maincontainer'}>
         <Navigation />
-        <div className={styles.main}>
+        <div className={'main'}>
           <img className={styles.image} src="/images/mainimage.jpeg" width="100%" height="auto" />
         </div>
         <div
           style={{
-            position: 'absolute',
             top: '0',
             left: '0',
-            marginTop: '10vh',
-            marginLeft: '45vw'
+            marginTop: '5vw',
+            marginLeft: '45vw',
+            marginRight: 0
           }}
         >
-          <h1 className={styles.mainheading}>Jo Brookbank</h1>
-          <h2 className={styles.subheading}>Family Homeopath</h2>
+          <h1
+            id="sitename"
+            className={styles.mainheading}
+            style={{ opacity: 1, transition: 'opacity 500ms ease-in-out' }}
+          >
+            Jo Brookbank
+          </h1>
+          <h2
+            id="sitesub"
+            className={styles.subheading}
+            style={{ opacity: 1, transition: 'opacity 500ms ease-in-out' }}
+          >
+            Family Homeopath
+          </h2>
           <p className={styles.openingpara}>
             Opening paragraph introducing yourself...Dolore velit exercitation commodo excepteur enim laboris
             consectetur irure id mollit sint magna. Velit consequat velit non officia eiusmod sunt consequat sint sit
@@ -41,7 +63,16 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className={styles.footer}></footer>
+      <footer>
+        <div className={'footercontainer'}>
+          <h3 style={{ textAlign: 'right', fontFamily: 'Nunito', fontWeight: '300', color: 'white', marginBottom: 5 }}>
+            Jo Brookbank, Family Homeopath: 12 Three Road, Sevenoaks - Tel: 01234 567890
+          </h3>
+          <h6 style={{ textAlign: 'right', fontFamily: 'Nunito', fontWeight: '300', color: 'white', marginTop: 5 }}>
+            Website Design ©Richard Barnes 2020
+          </h6>
+        </div>
+      </footer>
     </div>
   );
 }
