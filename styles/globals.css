@@ -10,7 +10,7 @@ body {
 }
 
 section {
-  margin-top: 2vw;
+  margin-top: 2vh;
   margin-left: 8vw;
   margin-right: 8vw;
 }
@@ -25,6 +25,7 @@ h1 {
   font-size: 3vw;
   font-weight: 700;
   font-family: 'Mate SC', serif, Verdana, sans-serif;
+  margin: 0;
 }
 
 h6 {
@@ -47,7 +48,7 @@ h6 {
 .pagehead {
   margin-left: 8vw;
   margin-right: 8vw;
-  margin-top: 15vh;
+  margin-top: 7vw;
 }
 
 .pagesmain {

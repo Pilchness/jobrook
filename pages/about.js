@@ -20,10 +20,16 @@ export default function About() {
             </header>
             <img
               src="/images/homeopath.png"
-              height="40%"
-              width="40%"
+              height="30%"
+              width="30%"
               alt="Image"
-              style={{ float: 'left', marginRight: 50, marginBottom: 50, border: '1px solid #000000' }}
+              style={{
+                float: 'left',
+                marginRight: '1vw',
+                marginBottom: '1vw',
+                marginTop: 25,
+                border: '1px solid #000000'
+              }}
             />
 
             <p>
