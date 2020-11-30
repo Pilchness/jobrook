@@ -3,7 +3,7 @@ import Navigation from './components/navigation';
 import Footer from './components/footer';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { treatments } from './data/treatments';
+import treatments from './data/treatments';
 
 export default function Fees() {
   const [selectedTreatment, setSelectedTreatment] = useState(0);
