@@ -19,7 +19,7 @@ export default function Booking() {
               <h1>Contact</h1>
             </header>
 
-            <p>Contact form here</p>
+            <p>Contact form</p>
           </section>
         </div>
       </main>
