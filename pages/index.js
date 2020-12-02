@@ -31,15 +31,7 @@ export default function Home() {
         <div className={'main'}>
           <img className={styles.image} src="/images/mainimage.jpeg" width="100%" height="auto" />
         </div>
-        <div
-          style={{
-            top: '0',
-            left: '0',
-            marginTop: '5vw',
-            marginLeft: '45vw',
-            marginRight: 0
-          }}
-        >
+        <div className={styles.maincontent}>
           <h1
             id="sitename"
             className={styles.mainheading}

@@ -12,36 +12,38 @@ export default function Fees() {
 
   const tablePrices = (
     <table id="prices">
-      <tr>
-        <th>Treatment</th>
-        <th>Duration</th>
-        <th>Price</th>
-      </tr>
-      <tr onClick={() => setSelectedTreatment(1)}>
-        <td>{treatments[1].name}</td>
-        <td>{treatments[1].duration}</td>
-        <td>£{treatments[1].price}</td>
-      </tr>
-      <tr onClick={() => setSelectedTreatment(2)}>
-        <td>{treatments[2].name}</td>
-        <td>{treatments[2].duration}</td>
-        <td>£{treatments[2].price}</td>
-      </tr>
-      <tr onClick={() => setSelectedTreatment(3)}>
-        <td>{treatments[3].name}</td>
-        <td>{treatments[3].duration}</td>
-        <td>£{treatments[3].price}</td>
-      </tr>
-      <tr onClick={() => setSelectedTreatment(4)}>
-        <td>{treatments[4].name}</td>
-        <td>{treatments[4].duration}</td>
-        <td>£{treatments[4].price}</td>
-      </tr>
-      <tr onClick={() => setSelectedTreatment(5)}>
-        <td>{treatments[5].name}</td>
-        <td>{treatments[5].duration}</td>
-        <td>£{treatments[5].price}</td>
-      </tr>
+      <tbody>
+        <tr>
+          <th>Treatment</th>
+          <th>Duration</th>
+          <th>Price</th>
+        </tr>
+        <tr onClick={() => setSelectedTreatment(1)}>
+          <td>{treatments[1].name}</td>
+          <td>{treatments[1].duration}</td>
+          <td>£{treatments[1].price}</td>
+        </tr>
+        <tr onClick={() => setSelectedTreatment(2)}>
+          <td>{treatments[2].name}</td>
+          <td>{treatments[2].duration}</td>
+          <td>£{treatments[2].price}</td>
+        </tr>
+        <tr onClick={() => setSelectedTreatment(3)}>
+          <td>{treatments[3].name}</td>
+          <td>{treatments[3].duration}</td>
+          <td>£{treatments[3].price}</td>
+        </tr>
+        <tr onClick={() => setSelectedTreatment(4)}>
+          <td>{treatments[4].name}</td>
+          <td>{treatments[4].duration}</td>
+          <td>£{treatments[4].price}</td>
+        </tr>
+        <tr onClick={() => setSelectedTreatment(5)}>
+          <td>{treatments[5].name}</td>
+          <td>{treatments[5].duration}</td>
+          <td>£{treatments[5].price}</td>
+        </tr>
+      </tbody>
     </table>
   );
 
@@ -72,21 +74,31 @@ export default function Fees() {
               <div style={{ display: 'grid', gridTemplateColumns: '1fr minmax(150px, 25%)' }}>
                 <div>{tablePrices}</div>
                 <div
+                  id="treatment"
                   style={{
                     marginLeft: '1vw',
                     backgroundColor: 'lightseagreen',
+                    opacity: 1,
+                    cursor: 'pointer',
                     paddingLeft: 20,
                     paddingRight: 20,
                     textAlign: 'center'
                   }}
                 >
                   <h3
-                    style={{ textAlign: 'center', fontFamily: 'Nunito', fontWeight: 900 }}
                     onClick={() => setSelectedTreatment(0)}
+                    style={{
+                      textAlign: 'center',
+                      fontFamily: 'Nunito',
+                      fontWeight: 900,
+                      fontSize: '1.5vw',
+                      backgroundColor: 'green',
+                      color: 'white'
+                    }}
                   >
                     {`${treatments[selectedTreatment].name} £${treatments[selectedTreatment].price}`}
                   </h3>
-                  <p style={{ fontSize: '1em' }}>{treatments[selectedTreatment].description}</p>
+                  <p style={{ fontSize: '1.2vw' }}>{treatments[selectedTreatment].description}</p>
                   <button onClick={() => router.push('/booking')} className={'buttoncontainer'}>
                     Book Now
                   </button>

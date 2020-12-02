@@ -11,8 +11,8 @@ body {
 
 section {
   margin-top: 2vh;
-  margin-left: 8vw;
-  margin-right: 8vw;
+  margin-left: clamp(2vw, 4vw, 8vw);
+  margin-right: clamp(2vw, 4vw, 8vw);
 }
 
 p {
@@ -101,6 +101,15 @@ a {
   margin-right: 8vw;
 }
 
+.footerfont {
+  text-align: right;
+  font-family: Nunito;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 5;
+  font-size: 1em;
+}
+
 footer {
   background-color: black;
   opacity: 0.5;
@@ -113,7 +122,7 @@ footer {
 
 #prices {
   font-family: Nunito, 'Lucida Sans', 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
-  font-size: 1em;
+  font-size: 1.5vw;
   border-collapse: collapse;
   width: 100%;
 }
@@ -144,7 +153,7 @@ footer {
   background-color: slategray;
   color: white;
   font-family: 'Mate SC', serif, Verdana, sans-serif;
-  font-size: 1.5em;
+  font-size: 1.5vw;
 }
 
 .buttoncontainer {
@@ -173,7 +182,7 @@ button {
   color: darkslategrey;
   margin: 0;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.5vw;
 }
 
 #calbutton {
@@ -227,4 +236,55 @@ button:visited {
 #bookingbutton {
   width: 250px;
   font-size: 1em;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+  p {
+    font-size: 8px;
+  }
+
+  #mainimage {
+    display: none;
+  }
+
+  .footerfont {
+    text-align: right;
+    font-family: Nunito;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 5;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footerfont {
+    font-weight: 200;
+    margin-bottom: 4;
+    font-size: 0.8em;
+  }
+
+  h6 {
+    font-size: 0.6em;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .footerfont {
+    font-weight: 200;
+    margin-bottom: 3;
+    font-size: 0.5em;
+  }
+
+  h6 {
+    font-size: 0.3em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
